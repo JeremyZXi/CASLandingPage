@@ -1,42 +1,237 @@
-.App {
-  text-align: center;
+/* 全局样式 */
+body {
+  font-family: 'Blinker', sans-serif;
 }
 
-.font-blinker {
-  font-family: 'Blinker', sans-serif; /* Replace 'Blinker' with your actual font name if different */
-
+/* Navbar 样式 */
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 50;
+  transition: background-color 0.3s;
 }
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.navbar-logo {
+  height: 2rem;
+}
+
+.navbar-links {
+  display: none;
+}
+
+.navbar-link {
+  color: white;
+}
+
+.navbar-link:hover {
+  color: #BFDBFE;
+}
+
+@media (min-width: 768px) {
+  .navbar-links {
+    display: flex;
+    gap: 1rem;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Banner 样式 */
+.banner {
+  position: relative;
+  height: 18rem;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .banner {
+    height: 20rem;
+  }
+}
+
+.banner-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.banner-title {
+  font-size: 2.25rem;
+  font-weight: bold;
   color: white;
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+/* ProjectCard 样式 */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.project-card-image {
+  width: 100%;
+  height: 33.333%;
+  object-fit: cover;
+}
+
+.project-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.project-card-title {
+  font-weight: bold;
+}
+
+.project-card-description {
+  margin-top: 0.5rem;
+}
+
+.project-card-button {
+  margin-top: auto;
+}
+
+/* Footer 样式 */
+.footer {
+  background-color: rgb(25, 34, 54);
+  color: white;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* 页面容器 */
+.page-container {
+  min-height: 100vh;
+}
+
+/* 特定页面样式 */
+.landing-page {
+  background-color: rgb(255, 255, 255);
+}
+
+.about-page {
+  background-color: #E0F2FE;
+}
+
+.editor-page {
+  background-image: linear-gradient(to bottom, #E0F2FE, white);
+}
+
+/* 编辑器页面特定样式 */
+.editor-header {
+  background-color: rgb(25, 34, 54);
+  color: white;
+  padding: 5rem 1rem;
+  text-align: center;
+}
+
+.editor-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.editor-subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.editor-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.editor-button {
+  background-color: rgb(170, 37, 62);
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  font-size: 1.125rem;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.editor-button:hover {
+  background-color: white;
+  color: rgb(170, 37, 62);
+}
+
+.feature-section {
+  margin-bottom: 5rem;
+}
+
+.feature-title {
+  font-size: 1.875rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .feature-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
+
+@media (min-width: 1024px) {
+  .feature-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.feature-card {
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s;
+}
+
+.feature-card:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+  width: 3rem;
+  height: 3rem;
+  color: #3B82F6;
+  margin-bottom: 1rem;
+}
+
+.feature-card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.feature-card-description {
+  color: #4B5563;
+}
+
+/* 统计页面特定样式 */
+.statistics-chart {
+  width: 100%;
+  height: 400px;
+}
+
+/* 添加其他需要的样式 */
