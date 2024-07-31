@@ -5,24 +5,27 @@ import { X, Menu } from 'lucide-react';
 const Navbar = () => {
     const [scrollY, setScrollY] = useState(0);
     const [navbarBackground, setNavbarBackground] = useState('transparent');
-    const [logoSrc, setLogoSrc] = useState('assests/KeyArchlogo.svg'); // 初始浅色logo
+    const [logoSrc, setLogoSrc] = useState('assests/KeyArchlogo.svg');
     const [textColor, setTextColor] = useState('text-white');
+    const [menuIconColor, setMenuIconColor] = useState('text-white'); // State for menu icon color
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
             setScrollY(window.scrollY);
-            const bannerHeight = 100; // Adjust this value as needed
+            const bannerHeight = 100;
 
             if (scrollY > bannerHeight) {
-                const alpha = Math.min((scrollY - bannerHeight) / 100, 1); // Adjust the divisor for how quickly you want the color to change
+                const alpha = Math.min((scrollY - bannerHeight) / 100, 1);
                 setNavbarBackground(`rgba(255, 255, 255, ${alpha})`);
-                setLogoSrc('assests/KeyCAS_logo_b.svg'); // Change to dark logo when scrolling down
-                setTextColor('text-gray-600'); // Change text color to gray when scrolling down
+                setLogoSrc('assests/KeyCAS_logo_b.svg');
+                setTextColor('text-gray-600');
+                setMenuIconColor('text-gray-600'); // Adjust menu icon color when scrolling down
             } else {
                 setNavbarBackground('transparent');
-                setLogoSrc('assests/KeyArchlogo.svg'); // Default light logo when at the top
-                setTextColor('text-white'); // Default text color when at the top
+                setLogoSrc('assests/KeyArchlogo.svg');
+                setTextColor('text-white');
+                setMenuIconColor('text-white'); // Default menu icon color when at the top
             }
         };
 
@@ -35,6 +38,25 @@ const Navbar = () => {
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
+        // Adjust menu icon color when menu opens/closes
+        if (!isMenuOpen) {
+            setLogoSrc('assests/KeyArchlogo.svg');
+            setTextColor('text-white');
+        } else {
+            setScrollY(window.scrollY);
+            const bannerHeight = 100;
+
+            if (scrollY > bannerHeight) {
+                const alpha = Math.min((scrollY - bannerHeight) / 100, 1);
+                setNavbarBackground(`rgba(255, 255, 255, ${alpha})`);
+                setLogoSrc('assests/KeyCAS_logo_b.svg');
+                setTextColor('text-gray-600');
+            } else {
+                setNavbarBackground('transparent');
+                setLogoSrc('assests/KeyArchlogo.svg');
+                setTextColor('text-white');
+            }
+        }
     };
 
     useEffect(() => {
@@ -57,7 +79,7 @@ const Navbar = () => {
                             <Link to="/" className={`text-2xl font-bold ${textColor}`}>KA CAS Archive</Link>
                         </div>
                         <button onClick={toggleMenu} className="md:hidden text-white">
-                            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                            {isMenuOpen ? <X size={24} className={menuIconColor} /> : <Menu size={24} className={menuIconColor} />}
                         </button>
                         <div className="hidden md:flex gap-4">
                             <Link to="/" className={`hover:text-blue-200 ${textColor}`}>Home</Link>
@@ -67,7 +89,6 @@ const Navbar = () => {
                             <a href="https://keycas-doc.github.io/" target="_blank" rel="noopener noreferrer" className={`hover:text-blue-200 ${textColor}`}>Docs</a>
                             <Link to="/casguide" className={`hover:text-blue-200 ${textColor}`}>CAS Guide</Link>
                         </div>
-
                     </div>
                 </div>
             </nav>
@@ -77,20 +98,20 @@ const Navbar = () => {
                     <div className="container mx-auto px-4 py-8">
                         <div className="flex justify-between items-center mb-8">
                             <div className="flex items-center gap-4">
-                                <img src={logoSrc} alt="Logo" className="h-8" />
-                                <span className={`text-2xl font-bold ${textColor}`}>KA CAS Archive</span>
+                                <img src="assests/KeyArchlogo.svg" alt="Logo" className="h-8" />
+                                <span className={`text-2xl font-bold text-white`}>KA CAS Archive</span>
                             </div>
                             <button onClick={toggleMenu} className="text-white">
-                                <X size={24} />
+                                <X size={24} className={menuIconColor} />
                             </button>
                         </div>
                         <div className="flex flex-col gap-6 text-lg">
-                            <Link to="/" className={`hover:text-blue-200 ${textColor}`}>Home</Link>
-                            <Link to="/about" className={`hover:text-blue-200 ${textColor}`}>About</Link>
-                            <Link to="/editor" className={`hover:text-blue-200 ${textColor}`}>Web Editor</Link>
-                            <Link to="https://jeremyzxi.github.io/" className={`hover:text-blue-200 ${textColor}`}>Support</Link>
-                            <Link to="https://keycas-doc.github.io/" className={`hover:text-blue-200 ${textColor}`}>Docs</Link>
-                            <Link to="/casguide" className={`hover:text-blue-200 ${textColor}`}>CAS Guide</Link>
+                            <Link to="/" className={`hover:text-blue-200 text-white`}>Home</Link>
+                            <Link to="/about" className={`hover:text-blue-200 text-white`}>About</Link>
+                            <Link to="/editor" className={`hover:text-blue-200 text-white`}>Web Editor</Link>
+                            <Link to="https://jeremyzxi.github.io/" className={`hover:text-blue-200 text-white`}>Support</Link>
+                            <Link to="https://keycas-doc.github.io/" className={`hover:text-blue-200 text-white`}>Docs</Link>
+                            <Link to="/casguide" className={`hover:text-blue-200 text-white`}>CAS Guide</Link>
                         </div>
                     </div>
                 </div>
