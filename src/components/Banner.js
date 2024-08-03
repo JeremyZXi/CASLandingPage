@@ -27,7 +27,7 @@ const Banner = ({ title, showButton = false, button_text = "Get Started", button
     };
 
     return (
-        <div className="relative h-1/2 md:h-1/2 overflow-hidden">
+        <div className="relative h-screen md:h-screen overflow-hidden">
             <div >
                 <Slider {...settings}>
                     <div>

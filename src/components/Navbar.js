@@ -76,7 +76,7 @@ const Navbar = () => {
                             <Link to="/">
                                 <img src={logoSrc} alt="Logo" className="h-8" />
                             </Link>
-                            <Link to="/" className={`text-2xl font-bold ${textColor}`}>KA CAS Archive</Link>
+                            <Link to="/" className={`text-2xl ${textColor}`}>KeyCAS</Link>
                         </div>
                         <button onClick={toggleMenu} className="md:hidden text-white">
                             {isMenuOpen ? <X size={24} className={menuIconColor} /> : <Menu size={24} className={menuIconColor} />}

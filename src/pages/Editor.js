@@ -70,11 +70,6 @@ const Editor = () => {
                                 Request Indexing
                             </Button>
                         </a>
-                        <a href="https://app.netlify.com/login">
-                            <Button className="bg-[rgb(170,37,62)] text-[rgb(255,255,255)] hover:bg-white hover:text-[rgb(170,37,62)] px-8 py-3 rounded-full text-lg font-bold transition-colors duration-300">
-                                Make Your Website LIVE
-                            </Button>
-                        </a>
                     </div>
                 </div>
             </header>
