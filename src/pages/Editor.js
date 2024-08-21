@@ -209,7 +209,7 @@ const Editor = () => {
                                 <div className="flex-grow">
                                     <h2 className="text-gray-900 text-lg title-font font-medium mb-3">Choose a Template</h2>
                                     <p className="leading-relaxed text-base">Start with a pre-designed template and get yourself live in seconds or start from a blank canva from scratch</p>
-                                    <a className="mt-3 text-[rgb(25,34,54)] inline-flex items-center">Learn More
+                                    <a className="mt-3 text-[rgb(25,34,54)] inline-flex items-center" href="https://keycas-doc.github.io/docs/quick-start">Learn More
                                         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-4 h-4 ml-2"
                                              viewBox="0 0 24 24">
                                             <path d="M5 12h14M12 5l7 7-7 7"></path>
@@ -228,7 +228,7 @@ const Editor = () => {
                                 <div className="flex-grow">
                                     <h2 className="text-gray-900 text-lg title-font font-medium mb-3">Customize Your Design</h2>
                                     <p className="leading-relaxed text-base">Use the drag & drop editor to personalize your website</p>
-                                    <a className="mt-3 text-[rgb(25,34,54)] inline-flex items-center">Learn More
+                                    <a className="mt-3 text-[rgb(25,34,54)] inline-flex items-center" href="https://keycas-doc.github.io/docs/quick-start">Learn More
                                         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-4 h-4 ml-2"
                                              viewBox="0 0 24 24">
                                             <path d="M5 12h14M12 5l7 7-7 7"></path>
@@ -246,7 +246,7 @@ const Editor = () => {
                                 <div class="flex-grow">
                                     <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Publish Your Site</h2>
                                     <p class="leading-relaxed text-base">Deploy your website with a single click, and ask for a free domain.</p>
-                                    <a class="mt-3 text-[rgb(25,34,54)] inline-flex items-center">Learn More
+                                    <a class="mt-3 text-[rgb(25,34,54)] inline-flex items-center" href="https://keycas-doc.github.io/docs/quick-start">Learn More
                                         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
                                             <path d="M5 12h14M12 5l7 7-7 7"></path>
                                         </svg>
@@ -254,8 +254,9 @@ const Editor = () => {
                                 </div>
                             </div>
                         </div>
-                        <button class="flex mx-auto mt-16 text-white bg-[rgb(25,34,54)] border-0 py-2 px-8 focus:outline-none hover:bg-[rgb(170,37,62)] rounded text-lg">Button</button>
-
+                        <a href="https://edit.keycas.cn">
+                        <button class="flex mx-auto mt-16 text-white bg-[rgb(25,34,54)] border-0 py-2 px-8 focus:outline-none hover:bg-[rgb(170,37,62)] rounded text-lg">Get Started</button>
+                        </a>
                     </div>
                 </section>
 
@@ -267,7 +268,7 @@ const Editor = () => {
                                 <CardTitle className="text-xl font-bold">Create Your Own Free Website NOW!</CardTitle>
                             </CardHeader>
                             <CardContent>
-                                <a href="https://v3.silex.me">
+                                <a href="https://edit.keycas.cn">
                                     <Button className="bg-[rgb(25,34,54)] hover:bg-[rgb(170,37,62)] text-white px-8 py-3 rounded-full text-lg font-bold transition-colors duration-300">
                                         Get Started
                                     </Button>
