@@ -1,6 +1,9 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import Fuse from 'fuse.js';
 import Highlighter from "react-highlight-words";
+import { FaSearch, FaTimes } from 'react-icons/fa';
+import { motion, AnimatePresence } from "framer-motion";
+
 import Navbar from '../components/Navbar';
 import Hero from "../components/hero";
 import ProjectCard from '../components/ProjectCard';
@@ -16,6 +19,10 @@ const Landing = () => {
 
     const categories = ['All', ...new Set(projects.map(project => project.category))];
 
+    const clearSearch = () => {
+        setSearchInput('');
+        setIsFocused(false);
+    };
     const fuse = useMemo(() => new Fuse(projects, {
         keys: [
             { name: 'title', weight: 0.4 },
