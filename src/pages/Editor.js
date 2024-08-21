@@ -47,46 +47,61 @@ const Editor = () => {
     return (
         <div className="min-h-screen ">
             <Navbar />
-            <header className="bg-[rgb(25,34,54)] text-white py-40 px-4 h-screen">
-                <div className="container mx-auto text-center">
-                    <h1 className="text-5xl font-bold mb-4">
-                        Create Stunning Websites with{' '}
-                        <u>
-                            <a href="https://www.silex.me/" style={{ color: "white" }}>
-                                <span className="hover:text-[rgb(236,98,124)]">SILEX</span>
-                            </a>
-                        </u>
-                    </h1><br/>
+            <header className="bg-gradient-to-br from-[rgb(20,29,49)] via-[rgb(25,34,54)] to-[rgb(40,50,70)] text-white min-h-screen flex items-center justify-center px-4 py-20 relative overflow-hidden">
+                <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1IiBoZWlnaHQ9IjUiPgo8cmVjdCB3aWR0aD0iNSIgaGVpZ2h0PSI1IiBmaWxsPSIjMjIyIj48L3JlY3Q+CjxwYXRoIGQ9Ik0wIDVMNSAwWk02IDRMNCA2Wk0tMSAxTDEgLTFaIiBzdHJva2U9IiMzMzMiIHN0cm9rZS13aWR0aD0iMSI+PC9wYXRoPgo8L3N2Zz4=')] opacity-5"></div>
 
-                    <p className="text-xl mb-8">The open-source website builder for creative professionals. Create website without any knowledge of coding</p><br/><br/>
-                    <div className="flex justify-center gap-20">
-                        <a href="https://keycas-doc.github.io/">
-                            <Button className="bg-[rgb(170,37,62)] text-[rgb(255,255,255)] hover:bg-white hover:text-[rgb(170,37,62)] px-8 py-3 rounded-xl text-xl font-bold transition-colors duration-300 h-16 w-64">
-                                View Docs
+                <div className="container mx-auto text-center relative z-10">
+                    <h1 className="text-6xl font-extrabold mb-6 leading-tight tracking-tight">
+                        Create Stunning Websites with{' '}
+                        <a href="https://www.silex.me/" className="relative inline-block group">
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-500 to-indigo-500 hover:from-indigo-500 hover:via-purple-500 hover:to-pink-400 transition-all duration-500">SILEX</span>
+                            <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-pink-400 via-purple-500 to-indigo-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></span>
+                        </a>
+                    </h1>
+
+                    <p className="text-2xl mb-12 max-w-3xl mx-auto text-gray-300 leading-relaxed">The open-source website builder for creative professionals. Create stunning websites without any knowledge of coding.</p>
+
+                    <div className="flex flex-col sm:flex-row justify-center gap-6 mb-12">
+                        <a href="https://keycas-doc.github.io/" className="group">
+                            <Button className="bg-gradient-to-r from-[rgb(170,37,62)] to-[rgb(200,57,82)] text-white hover:from-white hover:to-white hover:text-[rgb(170,37,62)] px-8 py-4 rounded-lg text-xl font-bold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 w-full sm:w-64">
+                                <span className="group-hover:scale-110 inline-block transition-transform duration-300">View Docs</span>
                             </Button>
                         </a>
-                        <a href="https://your-index-website-url.com">
-                            <Button className="bg-[rgb(170,37,62)] text-[rgb(255,255,255)] hover:bg-white hover:text-[rgb(170,37,62)] px-8 py-3 rounded-xl text-xl font-bold transition-colors duration-300 h-16 w-64">
-                                Request Indexing
+                        <a href="https://your-index-website-url.com" className="group">
+                            <Button className="bg-gradient-to-r from-[rgb(170,37,62)] to-[rgb(200,57,82)] text-white hover:from-white hover:to-white hover:text-[rgb(170,37,62)] px-8 py-4 rounded-lg text-xl font-bold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 w-full sm:w-64">
+                                <span className="group-hover:scale-110 inline-block transition-transform duration-300">Request Indexing</span>
                             </Button>
                         </a>
                     </div>
-                    <br/><br/>
-                    <div className="flex justify-center gap-20">
-                        <a href="https://edit.keycas.cn/en/connectors/">
-                            <Button className="bg-[rgb(170,37,62)] text-[rgb(255,255,255)] hover:bg-white hover:text-[rgb(170,37,62)] px-8 py-3 rounded-b-full rounded-t-full text-xl font-bold transition-colors duration-300 h-16 w-80 flex items-center justify-center">
-                                <img src="assests/KeyCAS_keystoneblue_round.svg" alt="Logo" className="h-12 mr-3 inline-block align-left" />
-                                <span className="inline-block align-middle">Start Creating</span>
+
+                    <div className="flex justify-center">
+                        <a href="https://edit.keycas.cn/en/connectors/" className="group">
+                            <Button className="bg-gradient-to-r from-[rgb(170,37,62)] to-[rgb(200,57,82)] text-white hover:from-white hover:to-white hover:text-[rgb(170,37,62)] px-8 py-4 rounded-full text-xl font-bold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 h-16 w-80 flex items-center justify-center">
+                                <img src="assests/KeyCAS_keystoneblue_round.svg" alt="Logo" className="h-10 mr-3 transition-transform duration-300 group-hover:rotate-12" />
+                                <span className="group-hover:scale-110 inline-block transition-transform duration-300">Start Creating</span>
                             </Button>
-
-
                         </a>
                     </div>
                 </div>
+
+                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
+                    <svg className="animate-bounce w-6 h-6 text-white opacity-50" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+                        <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                    </svg>
+                </div>
             </header>
+
+
+
             <main className="container mx-auto px-4 py-16">
                 <section className="mb-20">
-                    <h2 className="text-3xl font-bold text-center mb-12">Key Features</h2>
+                    <div className="text-center mb-20">
+                        <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">Key Features</h1>
+                        <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">Build website in seconds without any coding</p>
+                        <div className="flex mt-6 justify-center">
+                            <div className="w-16 h-1 rounded-full bg-[rgb(25,34,54)] inline-flex"></div>
+                        </div>
+                    </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {featureCards.map((card, index) => (
                             <div
@@ -260,39 +275,53 @@ const Editor = () => {
                     </div>
                 </section>
 
-                <section className="mb-20">
-                    <h2 className="text-3xl font-bold text-center mb-12">Ready to Go?</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-                        <Card className="bg-white shadow-lg">
-                            <CardHeader>
-                                <CardTitle className="text-xl font-bold">Create Your Own Free Website NOW!</CardTitle>
-                            </CardHeader>
-                            <CardContent>
-                                <a href="https://edit.keycas.cn">
-                                    <Button className="bg-[rgb(25,34,54)] hover:bg-[rgb(170,37,62)] text-white px-8 py-3 rounded-full text-lg font-bold transition-colors duration-300">
-                                        Get Started
-                                    </Button>
-                                </a>
-                            </CardContent>
-                        </Card>
-
-                        {/* 使用 Flexbox 实现居中对齐 */}
-                        <div className="flex items-center justify-center col-span-1 md:col-span-1 text-5xl font-bold">
-                            <h1>OR</h1>
+                <section className="py-20">
+                    <div className="container mx-auto px-4">
+                        <div className="text-center mb-20">
+                            <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">Ready to Go?</h1>
+                            <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">Elevate your presence now</p>
+                            <div className="flex mt-6 justify-center">
+                                <div className="w-16 h-1 rounded-full bg-[rgb(25,34,54)] inline-flex"></div>
+                            </div>
                         </div>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
+                            <Card className="bg-white rounded-lg shadow-lg transition-transform duration-300 hover:translate-y-[-8px]">
+                                <CardHeader>
+                                    <CardTitle className="text-2xl font-bold text-[rgb(25,34,54)]">Create Your Free Website</CardTitle>
+                                </CardHeader>
+                                <CardContent className="p-6">
+                                    <p className="mb-6 text-gray-600">Launch your professional website in minutes.</p>
+                                    <a href="https://edit.keycas.cn" className="block">
+                                        <Button className="w-full bg-[rgb(25,34,54)] hover:bg-[rgb(170,37,62)] text-white px-6 py-3 rounded text-lg font-semibold transition-colors duration-300">
+                                            Get Started
+                                        </Button>
+                                    </a>
+                                </CardContent>
+                            </Card>
 
-                        <Card className="bg-white shadow-lg">
-                            <CardHeader>
-                                <CardTitle className="text-xl font-bold">Get Your Website Indexed NOW!</CardTitle>
-                            </CardHeader>
-                            <CardContent>
-                                <Button className="bg-[rgb(25,34,54)] hover:bg-[rgb(170,37,62)] text-white px-8 py-3 rounded-full text-lg font-bold transition-colors duration-300">
-                                    Request Indexing
-                                </Button>
-                            </CardContent>
-                        </Card>
+                            <div className="flex flex-col items-center justify-center">
+                                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[rgb(170,37,62)] to-[rgb(25,34,54)] flex items-center justify-center">
+                                    <span className="text-2xl font-bold text-white">OR</span>
+                                </div>
+                            </div>
+
+                            <Card className="bg-white rounded-lg shadow-lg transition-transform duration-300 hover:translate-y-[-8px]">
+                                <CardHeader>
+                                    <CardTitle className="text-2xl font-bold text-[rgb(25,34,54)]">Get Indexed</CardTitle>
+                                </CardHeader>
+                                <CardContent className="p-6">
+                                    <p className="mb-6 text-gray-600">Request a free subdomain</p>
+                                    <Button className="w-full bg-[rgb(170,37,62)] hover:bg-[rgb(25,34,54)] text-white px-6 py-3 rounded text-lg font-semibold transition-colors duration-300">
+                                        Request Indexing
+                                    </Button>
+                                </CardContent>
+                            </Card>
+                        </div>
                     </div>
                 </section>
+
+
+
 
 
 
