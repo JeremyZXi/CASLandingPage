@@ -35,6 +35,9 @@ const Footer = () => (
                     />
                 </a>
             </p>
+            <p>
+                
+            </p>
         </div>
     </footer>
 );

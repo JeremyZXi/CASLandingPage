@@ -6,7 +6,7 @@ import { Card, CardContent } from "../components/ui/card";
 
 const CASguide = () => {
     return (
-        <div className="min-h-screen bg-blue-100">
+        <div className="min-h-screen">
             <Navbar />
             <Banner title="Guide"/>
             <main className="container mx-auto p-4">

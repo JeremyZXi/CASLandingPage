@@ -47,7 +47,7 @@ const Editor = () => {
     return (
         <div className="min-h-screen ">
             <Navbar />
-            <header className="bg-[rgb(25,34,54)] text-white py-40 px-4">
+            <header className="bg-[rgb(25,34,54)] text-white py-40 px-4 h-screen">
                 <div className="container mx-auto text-center">
                     <h1 className="text-5xl font-bold mb-4">
                         Create Stunning Websites with{' '}
@@ -56,18 +56,26 @@ const Editor = () => {
                                 <span className="hover:text-[rgb(236,98,124)]">SILEX</span>
                             </a>
                         </u>
-                    </h1>
+                    </h1><br/>
 
-                    <p className="text-xl mb-8">The open-source website builder for creative professionals</p>
-                    <div className="flex justify-center gap-4">
-                        <a href="https://edit.keycas.cn/en/connectors/">
-                            <Button className="bg-[rgb(170,37,62)] text-[rgb(255,255,255)] hover:bg-white hover:text-[rgb(170,37,62)] px-8 py-3 rounded-full text-lg font-bold transition-colors duration-300">
-                                Start Creating
+                    <p className="text-xl mb-8">The open-source website builder for creative professionals</p><br/><br/>
+                    <div className="flex justify-center gap-20">
+                        <a href="https://keycas-doc.github.io/">
+                            <Button className="bg-[rgb(170,37,62)] text-[rgb(255,255,255)] hover:bg-white hover:text-[rgb(170,37,62)] px-8 py-3 rounded-xl text-xl font-bold transition-colors duration-300 h-16 w-64">
+                                View Docs
                             </Button>
                         </a>
                         <a href="https://your-index-website-url.com">
-                            <Button className="bg-[rgb(170,37,62)] text-[rgb(255,255,255)] hover:bg-white hover:text-[rgb(170,37,62)] px-8 py-3 rounded-full text-lg font-bold transition-colors duration-300">
+                            <Button className="bg-[rgb(170,37,62)] text-[rgb(255,255,255)] hover:bg-white hover:text-[rgb(170,37,62)] px-8 py-3 rounded-xl text-xl font-bold transition-colors duration-300 h-16 w-64">
                                 Request Indexing
+                            </Button>
+                        </a>
+                    </div>
+                    <br/><br/>
+                    <div className="flex justify-center gap-20">
+                        <a href="https://edit.keycas.cn/en/connectors/">
+                            <Button className="bg-[rgb(170,37,62)] text-[rgb(255,255,255)] hover:bg-white hover:text-[rgb(170,37,62)] px-8 py-3 rounded-3xl text-xl font-bold transition-colors duration-300 h-16 w-72">
+                                Start Creating
                             </Button>
                         </a>
                     </div>

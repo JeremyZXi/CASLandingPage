@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Slider from "react-slick";
 
-const Banner = ({ title, showButton = false, button_text = "Get Started", button_link = "/editor" }) => {
+const Banner = ({ title,text=""}) => {
     const [scrollY, setScrollY] = useState(0);
 
     useEffect(() => {
@@ -43,6 +43,7 @@ const Banner = ({ title, showButton = false, button_text = "Get Started", button
             </div>
             <div className="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center bg-gradient-to-b from-black via-gray-450 to-transparent">
                 <h1 className="text-4xl font-bold text-white mb-8 text-center font-blinker">{title}</h1>
+                <p className="text-lg mb-4">{text}</p>
             </div>
         </div>
     );
