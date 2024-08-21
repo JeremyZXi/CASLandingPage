@@ -4,7 +4,7 @@ import Footer from '../components/Footer';
 import FeatureCard from '../components/FeatureCard';
 import { Button } from "../components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
-import { Layout, Box, Layers, Sliders } from 'lucide-react';
+import { Layout, Box, Layers, Sliders, } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import CASguide from "./CASguide";
 
@@ -58,7 +58,7 @@ const Editor = () => {
                         </u>
                     </h1><br/>
 
-                    <p className="text-xl mb-8">The open-source website builder for creative professionals</p><br/><br/>
+                    <p className="text-xl mb-8">The open-source website builder for creative professionals. Create website without any knowledge of coding</p><br/><br/>
                     <div className="flex justify-center gap-20">
                         <a href="https://keycas-doc.github.io/">
                             <Button className="bg-[rgb(170,37,62)] text-[rgb(255,255,255)] hover:bg-white hover:text-[rgb(170,37,62)] px-8 py-3 rounded-xl text-xl font-bold transition-colors duration-300 h-16 w-64">
@@ -74,9 +74,12 @@ const Editor = () => {
                     <br/><br/>
                     <div className="flex justify-center gap-20">
                         <a href="https://edit.keycas.cn/en/connectors/">
-                            <Button className="bg-[rgb(170,37,62)] text-[rgb(255,255,255)] hover:bg-white hover:text-[rgb(170,37,62)] px-8 py-3 rounded-3xl text-xl font-bold transition-colors duration-300 h-16 w-72">
-                                Start Creating
+                            <Button className="bg-[rgb(170,37,62)] text-[rgb(255,255,255)] hover:bg-white hover:text-[rgb(170,37,62)] px-8 py-3 rounded-b-full rounded-t-full text-xl font-bold transition-colors duration-300 h-16 w-80 flex items-center justify-center">
+                                <img src="assests/KeyCAS_keystoneblue_round.svg" alt="Logo" className="h-12 mr-3 inline-block align-left" />
+                                <span className="inline-block align-middle">Start Creating</span>
                             </Button>
+
+
                         </a>
                     </div>
                 </div>
@@ -189,35 +192,73 @@ const Editor = () => {
                     </div>
                 </section>
 
-                <section className="mb-20">
-                    <h2 className="text-3xl font-bold text-center mb-12">How It Works</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <Card className="bg-white shadow-lg">
-                            <CardHeader>
-                                <CardTitle className="text-xl font-bold">1. Choose a Template</CardTitle>
-                            </CardHeader>
-                            <CardContent>
-                                <p className="text-gray-600">Start with a pre-designed template or a blank canvas</p>
-                            </CardContent>
-                        </Card>
-                        <Card className="bg-white shadow-lg">
-                            <CardHeader>
-                                <CardTitle className="text-xl font-bold">2. Customize Your Design</CardTitle>
-                            </CardHeader>
-                            <CardContent>
-                                <p className="text-gray-600">Use the drag & drop editor to personalize your website</p>
-                            </CardContent>
-                        </Card>
-                        <Card className="bg-white shadow-lg">
-                            <CardHeader>
-                                <CardTitle className="text-xl font-bold">3. Publish Your Site</CardTitle>
-                            </CardHeader>
-                            <CardContent>
-                                <p className="text-gray-600">Deploy your website with a single click</p>
-                            </CardContent>
-                        </Card>
+                <section className="text-gray-600 body-font">
+                    <div className="container px-5 py-24 mx-auto">
+                        <div className="text-center mb-20">
+                            <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">How It Works</h1>
+                            <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">Build website in seconds without any coding</p>
+                            <div className="flex mt-6 justify-center">
+                                <div className="w-16 h-1 rounded-full bg-[rgb(25,34,54)] inline-flex"></div>
+                            </div>
+                        </div>
+                        <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
+                            <div className="p-4 md:w-1/3 flex flex-col text-center items-center">
+                                <div className="w-20 h-20 inline-flex items-center justify-center rounded-full bg-indigo-100 text-[rgb(25,34,54)] mb-5 flex-shrink-0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-layout-template"><rect width="18" height="7" x="3" y="3" rx="1"/><rect width="9" height="7" x="3" y="14" rx="1"/><rect width="5" height="7" x="16" y="14" rx="1"/></svg>
+                                </div>
+                                <div className="flex-grow">
+                                    <h2 className="text-gray-900 text-lg title-font font-medium mb-3">Choose a Template</h2>
+                                    <p className="leading-relaxed text-base">Start with a pre-designed template and get yourself live in seconds or start from a blank canva from scratch</p>
+                                    <a className="mt-3 text-[rgb(25,34,54)] inline-flex items-center">Learn More
+                                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-4 h-4 ml-2"
+                                             viewBox="0 0 24 24">
+                                            <path d="M5 12h14M12 5l7 7-7 7"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="p-4 md:w-1/3 flex flex-col text-center items-center">
+                                <div className="w-20 h-20 inline-flex items-center justify-center rounded-full bg-indigo-100 text-[rgb(25,34,54)] mb-5 flex-shrink-0">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-10 h-10" viewBox="0 0 24 24">
+                                        <circle cx="6" cy="6" r="3"></circle>
+                                        <circle cx="6" cy="18" r="3"></circle>
+                                        <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
+                                    </svg>
+                                </div>
+                                <div className="flex-grow">
+                                    <h2 className="text-gray-900 text-lg title-font font-medium mb-3">Customize Your Design</h2>
+                                    <p className="leading-relaxed text-base">Use the drag & drop editor to personalize your website</p>
+                                    <a className="mt-3 text-[rgb(25,34,54)] inline-flex items-center">Learn More
+                                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-4 h-4 ml-2"
+                                             viewBox="0 0 24 24">
+                                            <path d="M5 12h14M12 5l7 7-7 7"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="p-4 md:w-1/3 flex flex-col text-center items-center">
+                                <div className="w-20 h-20 inline-flex items-center justify-center rounded-full bg-indigo-100 text-[rgb(25,34,54)] mb-5 flex-shrink-0">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-10 h-10" viewBox="0 0 24 24">
+                                        <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                                        <circle cx="12" cy="7" r="4"></circle>
+                                    </svg>
+                                </div>
+                                <div class="flex-grow">
+                                    <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Publish Your Site</h2>
+                                    <p class="leading-relaxed text-base">Deploy your website with a single click, and ask for a free domain.</p>
+                                    <a class="mt-3 text-[rgb(25,34,54)] inline-flex items-center">Learn More
+                                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                                            <path d="M5 12h14M12 5l7 7-7 7"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="flex mx-auto mt-16 text-white bg-[rgb(25,34,54)] border-0 py-2 px-8 focus:outline-none hover:bg-[rgb(170,37,62)] rounded text-lg">Button</button>
+
                     </div>
                 </section>
+
                 <section className="mb-20">
                     <h2 className="text-3xl font-bold text-center mb-12">Ready to Go?</h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
