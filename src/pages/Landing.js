@@ -95,9 +95,9 @@ const Landing = () => {
         <>
         <Helmet>
             <title>KeyCAS</title>
-            <meta name="description" content="这是我的应用的描述，影响搜索结果的描述内容。" />
-            <meta property="og:title" content="自定义标题 - 我的应用" />
-            <meta property="og:description" content="这是我的应用的描述，影响搜索结果的描述内容。" />
+            <meta name="description" content="A platform for Keystone students to present their on-going fascinating projects in a wide variety of fields. Join them or start your own!" />
+            <meta property="og:title" content="KeyCAS" />
+            <meta property="og:description" content="A platform for Keystone students to present their on-going fascinating projects in a wide variety of fields. Join them or start your own!" />
             <meta property="og:image" content="https://example.com/image.jpg" />
         </Helmet>
         <div className="min-h-screen bg-[rgb(255,255,255)]">

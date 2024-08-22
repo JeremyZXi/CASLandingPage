@@ -7,6 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card"
 import { Layout, Box, Layers, Sliders, } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import CASguide from "./CASguide";
+import {Helmet} from "react-helmet";
 
 const Editor = () => {
     const [activeTab, setActiveTab] = useState(0); // State to manage active tab, defaulting to the first tab
@@ -45,6 +46,14 @@ const Editor = () => {
     }, [autoplay]); // Dependency on autoplay state
 
     return (
+        <>
+        <Helmet>
+            <title>KeyCAS:Code free web builder</title>
+            <meta name="description" content="Create stunning websites in seconds, and facilitate your project." />
+            <meta property="og:title" content="KeyCAS:Code free web builder" />
+            <meta property="og:description" content="Create stunning websites in seconds, and facilitate your project." />
+            <meta property="og:image" content="https://example.com/image.jpg" />
+        </Helmet>
         <div className="min-h-screen ">
             <Navbar />
             <header className="bg-gradient-to-br from-[rgb(20,29,49)] via-[rgb(25,34,54)] to-[rgb(40,50,70)] text-white min-h-screen flex items-center justify-center px-4 py-20 relative overflow-hidden">
@@ -328,6 +337,7 @@ const Editor = () => {
             </main>
             <Footer />
         </div>
+        </>
     );
 };
 
