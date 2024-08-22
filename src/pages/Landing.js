@@ -3,6 +3,7 @@ import Fuse from 'fuse.js';
 import Highlighter from "react-highlight-words";
 import { FaSearch, FaTimes } from 'react-icons/fa';
 import { motion, AnimatePresence } from "framer-motion";
+import { Helmet } from 'react-helmet';
 
 import Navbar from '../components/Navbar';
 import Hero from "../components/hero";
