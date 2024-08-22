@@ -91,6 +91,14 @@ const Landing = () => {
     };
 
     return (
+        <>
+        <Helmet>
+            <title>KeyCAS</title>
+            <meta name="description" content="这是我的应用的描述，影响搜索结果的描述内容。" />
+            <meta property="og:title" content="自定义标题 - 我的应用" />
+            <meta property="og:description" content="这是我的应用的描述，影响搜索结果的描述内容。" />
+            <meta property="og:image" content="https://example.com/image.jpg" />
+        </Helmet>
         <div className="min-h-screen bg-[rgb(255,255,255)]">
             <Navbar />
             <Hero />
@@ -176,6 +184,7 @@ const Landing = () => {
             </main>
             <Footer />
         </div>
+        </>
     );
 };
 
