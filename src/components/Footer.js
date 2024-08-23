@@ -2,7 +2,7 @@ import React from 'react';
 import Contributors from "./Contributors";
 const Footer = () => {
     const socialLinks = [
-        { name: 'GitHub', url: 'https://github.com/your-github', icon: 'assests/github-mark-white.svg' },
+        { name: 'GitHub', url: 'https://github.com/JeremyZXi', icon: 'assests/github-mark-white.svg' },
     ];
 
     const quickLinks = [
