@@ -3,9 +3,18 @@ import Navbar from '../components/Navbar';
 import Banner from '../components/Banner';
 import Footer from '../components/Footer';
 import { Card, CardContent } from "../components/ui/card";
+import {Helmet} from "react-helmet";
 
 const About = () => {
     return (
+        <>
+            <Helmet>
+                <title>About us</title>
+                <meta name="description" content="A platform for Keystone students to present their on-going fascinating projects in a wide variety of fields. Join them or start your own!" />
+                <meta property="og:title" content="About us" />
+                <meta property="og:description" content="A platform for Keystone students to present their on-going fascinating projects in a wide variety of fields. Join them or start your own!" />
+            </Helmet>
+
         <div className="min-h-screen">
             <Navbar />
             <Banner title="About"/>
@@ -21,6 +30,7 @@ const About = () => {
             </main>
             <Footer />
         </div>
+        </>
     );
 };
 
