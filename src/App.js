@@ -30,71 +30,6 @@ import '@fontsource/blinker/700.css';
 
 
 
-const StatisticsPage = () => {
-    const chartRef = useRef(null);
-
-    useEffect(() => {
-        // Initialize ECharts
-        const chart = echarts.init(chartRef.current);
-
-        // Mock data
-        const data = [
-            { domain: 'example.com', visits: 1000 },
-            { domain: 'test.com', visits: 1500 },
-            { domain: 'demo.com', visits: 800 },
-        ];
-
-        // Chart options
-        const option = {
-            title: {
-                text: 'Domain Visit Statistics'
-            },
-            tooltip: {
-                trigger: 'axis',
-                axisPointer: {
-                    type: 'shadow'
-                }
-            },
-            xAxis: {
-                type: 'category',
-                data: data.map(item => item.domain)
-            },
-            yAxis: {
-                type: 'value'
-            },
-            series: [{
-                data: data.map(item => item.visits),
-                type: 'bar'
-            }]
-        };
-
-        // Set chart options
-        chart.setOption(option);
-
-        // Clean up
-        return () => {
-            chart.dispose();
-        };
-    }, []);
-    return (
-        <div className="min-h-screen bg-gradient-to-b from-blue-100 to-white">
-                <Navbar />
-                <Banner title="Stats" />
-            <main className="container mx-auto px-4 py-16">
-                <Card className="bg-white shadow-lg">
-                    <CardHeader>
-                        <CardTitle className="text-2xl font-bold">Visit Count Chart</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                        <div ref={chartRef} style={{ width: '100%', height: '400px' }} />
-                    </CardContent>
-                </Card>
-            </main>
-            <Footer />
-        </div>
-    );
-};
-
 
 
 const App = () => {
@@ -106,7 +41,6 @@ const App = () => {
                 <Route path="/about" element={<About />} />
                 <Route path="/casguide" element={<CASguide />} />
                 <Route path="/editor" element={<Editor />} />
-                <Route path="/statistics" element={<StatisticsPage />} />
             </Routes>
             </div>
         </Router>
