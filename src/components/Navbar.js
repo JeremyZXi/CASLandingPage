@@ -84,6 +84,7 @@ const Navbar = () => {
                         <div className="hidden md:flex gap-4">
                             <Link to="/" className={`hover:text-blue-200 ${textColor}`}>Home</Link>
                             <Link to="/about" className={`hover:text-blue-200 ${textColor}`}>About</Link>
+                            <Link to="/faq" className={`hover:text-blue-200 ${textColor}`}>FAQ</Link>
                             <Link to="/editor" className={`hover:text-blue-200 ${textColor}`}>Web Editor</Link>
                             <Link to="https://jeremyzxi.github.io/" target="_blank" rel="noopener noreferrer" className={`hover:text-blue-200 ${textColor}`}>Support</Link>
                             <a href="https://keycas-doc.github.io/" target="_blank" rel="noopener noreferrer" className={`hover:text-blue-200 ${textColor}`}>Docs</a>
@@ -108,6 +109,7 @@ const Navbar = () => {
                         <div className="flex flex-col gap-6 text-lg">
                             <Link to="/" className={`hover:text-blue-200 text-white`}>Home</Link>
                             <Link to="/about" className={`hover:text-blue-200 text-white`}>About</Link>
+                            <Link to="/faq" className={`hover:text-blue-200 text-white`}>FAQ</Link>
                             <Link to="/editor" className={`hover:text-blue-200 text-white`}>Web Editor</Link>
                             <Link to="https://jeremyzxi.github.io/" className={`hover:text-blue-200 text-white`}>Support</Link>
                             <Link to="https://keycas-doc.github.io/" className={`hover:text-blue-200 text-white`}>Docs</Link>

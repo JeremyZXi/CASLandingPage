@@ -10,6 +10,7 @@ import Landing from "./pages/Landing";
 import About from "./pages/About";
 import CASguide from "./pages/CASguide";
 import Editor from "./pages/Editor";
+import FAQ from "./pages/FAQ";
 //Component
 import Navbar from "./components/Navbar";
 import Banner from './components/Banner';
@@ -40,6 +41,7 @@ const App = () => {
                 <Route path="/" element={<Landing />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/casguide" element={<CASguide />} />
+                <Route path="/faq" element={<FAQ />} />
                 <Route path="/editor" element={<Editor />} />
             </Routes>
             </div>
