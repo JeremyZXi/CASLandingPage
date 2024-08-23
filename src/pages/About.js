@@ -1,4 +1,6 @@
 import React from 'react';
+import ReactGA from "react-ga4";
+
 import Navbar from '../components/Navbar';
 import Banner from '../components/Banner';
 import Footer from '../components/Footer';
@@ -7,6 +9,7 @@ import { Helmet } from "react-helmet";
 import { motion } from 'framer-motion';
 
 const About = () => {
+    ReactGA.send({ hitType: "pageview", page: "/about", title: "About" });
     const fadeIn = {
         initial: { opacity: 0, y: 20 },
         animate: { opacity: 1, y: 0 },

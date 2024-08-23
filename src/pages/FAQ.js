@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import ReactGA from "react-ga4";
+
 import Navbar from '../components/Navbar';
 import Banner from '../components/Banner';
 import Footer from '../components/Footer';
@@ -7,6 +9,7 @@ import { Helmet } from "react-helmet";
 import { motion, AnimatePresence } from 'framer-motion';
 
 const FAQ = () => {
+    ReactGA.send({ hitType: "pageview", page: "/faq", title: "FAQ" });
     const [openItems, setOpenItems] = useState({});
 
     const faqItems = [

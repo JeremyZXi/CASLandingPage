@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import ReactGA from "react-ga4";
+
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import FeatureCard from '../components/FeatureCard';
@@ -10,6 +12,7 @@ import CASguide from "./CASguide";
 import {Helmet} from "react-helmet";
 
 const Editor = () => {
+    ReactGA.send({ hitType: "pageview", page: "/editor", title: "Editor Info" });
     const [activeTab, setActiveTab] = useState(0); // State to manage active tab, defaulting to the first tab
     const [autoplay, setAutoplay] = useState(true); // State to manage autoplay feature
 

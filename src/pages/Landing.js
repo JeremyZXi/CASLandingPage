@@ -4,6 +4,7 @@ import Highlighter from "react-highlight-words";
 import { FaSearch, FaTimes } from 'react-icons/fa';
 import { motion, AnimatePresence } from "framer-motion";
 import { Helmet } from 'react-helmet';
+import ReactGA from "react-ga4";
 
 import Navbar from '../components/Navbar';
 import Hero from "../components/hero";
@@ -11,7 +12,9 @@ import ProjectCard from '../components/ProjectCard';
 import Footer from '../components/Footer';
 import { projects } from '../data/projects';
 
+
 const Landing = () => {
+    ReactGA.send({ hitType: "pageview", page: "/", title: "Home" });
     const [searchInput, setSearchInput] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('All');
     const [searchResults, setSearchResults] = useState(projects);

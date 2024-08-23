@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef  } from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import ReactGA from 'react-ga4';
+
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "./components/ui/card"
 import { Button } from "./components/ui/button"
 import { GraduationCap, Code, Palette, Microscope, Search, Menu, Layout, Box, Layers, Sliders, X } from 'lucide-react';
@@ -34,6 +36,7 @@ import '@fontsource/blinker/700.css';
 
 
 const App = () => {
+    ReactGA.initialize('G-4C333C30M3');
     return (
         <Router>
             <div className="font-blinker flex flex-col min-h-screen overflow-x-hidden">

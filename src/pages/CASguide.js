@@ -1,10 +1,13 @@
 import React from 'react';
+import ReactGA from "react-ga4";
+
 import Navbar from '../components/Navbar';
 import Banner from '../components/Banner';
 import Footer from '../components/Footer';
 import { Card, CardContent } from "../components/ui/card";
 
 const CASguide = () => {
+    ReactGA.send({ hitType: "pageview", page: "/casguide", title: "CAS Guide" });
     return (
         <div className="min-h-screen">
             <Navbar />
