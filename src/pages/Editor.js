@@ -51,7 +51,7 @@ const Editor = () => {
     return (
         <>
         <Helmet>
-            <title>KeyCAS:Code free web builder</title>
+            <title>Code free web builder</title>
             <meta name="description" content="Create stunning websites in seconds, and facilitate your project." />
             <meta property="og:title" content="KeyCAS:Code free web builder" />
             <meta property="og:description" content="Create stunning websites in seconds, and facilitate your project." />
