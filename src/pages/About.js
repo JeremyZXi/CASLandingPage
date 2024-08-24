@@ -19,7 +19,7 @@ const About = () => {
     return (
         <>
             <Helmet>
-                <title>About KeyCAS - Keystone Innovation Hub</title>
+                <title>About</title>
                 <meta name="description" content="Discover KeyCAS, a cutting-edge platform for Keystone students to present their innovative projects across diverse fields. Join a community of visionaries and start your journey today!" />
                 <meta property="og:title" content="About KeyCAS - Keystone Innovation Hub" />
                 <meta property="og:description" content="Discover KeyCAS, a cutting-edge platform for Keystone students to present their innovative projects across diverse fields. Join a community of visionaries and start your journey today!" />
