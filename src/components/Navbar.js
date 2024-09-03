@@ -7,65 +7,74 @@ const Navbar = () => {
     const [navbarBackground, setNavbarBackground] = useState('transparent');
     const [logoSrc, setLogoSrc] = useState('assests/KeyArchlogo.svg');
     const [textColor, setTextColor] = useState('text-white');
-    const [menuIconColor, setMenuIconColor] = useState('text-white'); // State for menu icon color
+    const [menuIconColor, setMenuIconColor] = useState('text-white');
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    useEffect(() => {
-        const handleScroll = () => {
-            setScrollY(window.scrollY);
-            const bannerHeight = 100;
+    const navLinks = [
+        { to: '/', label: 'Home' },
+        { to: '/about', label: 'About' },
+        { to: '/faq', label: 'FAQ' },
+        { to: '/editor', label: 'Web Editor' },
+        { to: 'https://jeremyzxi.github.io/', label: 'Support', external: true },
+        { to: 'https://keycas-doc.github.io/', label: 'Docs', external: true },
+        { to: '/casguide', label: 'CAS Guide' },
+    ];
 
-            if (scrollY > bannerHeight) {
-                const alpha = Math.min((scrollY - bannerHeight) / 100, 1);
-                setNavbarBackground(`rgba(255, 255, 255, ${alpha})`);
-                setLogoSrc('assests/KeyCAS_logo_b.svg');
-                setTextColor('text-gray-600');
-                setMenuIconColor('text-gray-600'); // Adjust menu icon color when scrolling down
-            } else {
-                setNavbarBackground('transparent');
-                setLogoSrc('assests/KeyArchlogo.svg');
-                setTextColor('text-white');
-                setMenuIconColor('text-white'); // Default menu icon color when at the top
-            }
-        };
+    const handleScroll = () => {
+        const currentScrollY = window.scrollY;
+        setScrollY(currentScrollY);
+        const bannerHeight = 100;
 
-        window.addEventListener('scroll', handleScroll);
-
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, [scrollY]);
-
-    const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen);
-        // Adjust menu icon color when menu opens/closes
-        if (!isMenuOpen) {
+        if (currentScrollY > bannerHeight) {
+            const alpha = Math.min((currentScrollY - bannerHeight) / 100, 1);
+            setNavbarBackground(`rgba(255, 255, 255, ${alpha})`);
+            setLogoSrc('assests/KeyCAS_logo_b.svg');
+            setTextColor('text-gray-600');
+            setMenuIconColor('text-gray-600');
+        } else {
+            setNavbarBackground('transparent');
             setLogoSrc('assests/KeyArchlogo.svg');
             setTextColor('text-white');
-        } else {
-            setScrollY(window.scrollY);
-            const bannerHeight = 100;
-
-            if (scrollY > bannerHeight) {
-                const alpha = Math.min((scrollY - bannerHeight) / 100, 1);
-                setNavbarBackground(`rgba(255, 255, 255, ${alpha})`);
-                setLogoSrc('assests/KeyCAS_logo_b.svg');
-                setTextColor('text-gray-600');
-            } else {
-                setNavbarBackground('transparent');
-                setLogoSrc('assests/KeyArchlogo.svg');
-                setTextColor('text-white');
-            }
+            setMenuIconColor('text-white');
         }
     };
 
     useEffect(() => {
-        if (isMenuOpen) {
-            document.body.style.overflow = 'hidden';
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+        if (!isMenuOpen) {
+            setLogoSrc('assests/KeyArchlogo.svg');
+            setTextColor('text-white');
         } else {
-            document.body.style.overflow = 'unset';
+            handleScroll();
         }
+    };
+
+    useEffect(() => {
+        document.body.style.overflow = isMenuOpen ? 'hidden' : 'unset';
     }, [isMenuOpen]);
+
+    const renderNavLink = (link, isMobile = false) => {
+        const className = `hover:text-blue-200 ${isMobile ? 'text-white' : textColor}`;
+        if (link.external) {
+            return (
+                <a key={link.label} href={link.to} target="_blank" rel="noopener noreferrer" className={className}>
+                    {link.label}
+                </a>
+            );
+        }
+        return (
+            <Link key={link.label} to={link.to} className={className}>
+                {link.label}
+            </Link>
+        );
+    };
 
     return (
         <>
@@ -82,13 +91,7 @@ const Navbar = () => {
                             {isMenuOpen ? <X size={24} className={menuIconColor} /> : <Menu size={24} className={menuIconColor} />}
                         </button>
                         <div className="hidden md:flex gap-4">
-                            <Link to="/" className={`hover:text-blue-200 ${textColor}`}>Home</Link>
-                            <Link to="/about" className={`hover:text-blue-200 ${textColor}`}>About</Link>
-                            <Link to="/faq" className={`hover:text-blue-200 ${textColor}`}>FAQ</Link>
-                            <Link to="/editor" className={`hover:text-blue-200 ${textColor}`}>Web Editor</Link>
-                            <Link to="https://jeremyzxi.github.io/" target="_blank" rel="noopener noreferrer" className={`hover:text-blue-200 ${textColor}`}>Support</Link>
-                            <a href="https://keycas-doc.github.io/" target="_blank" rel="noopener noreferrer" className={`hover:text-blue-200 ${textColor}`}>Docs</a>
-                            <Link to="/casguide" className={`hover:text-blue-200 ${textColor}`}>CAS Guide</Link>
+                            {navLinks.map(link => renderNavLink(link))}
                         </div>
                     </div>
                 </div>
@@ -100,20 +103,14 @@ const Navbar = () => {
                         <div className="flex justify-between items-center mb-8">
                             <div className="flex items-center gap-4">
                                 <img src="assests/KeyArchlogo.svg" alt="Logo" className="h-8" />
-                                <span className={`text-2xl font-bold text-white`}>KA CAS Archive</span>
+                                <span className="text-2xl font-bold text-white">KA CAS Archive</span>
                             </div>
                             <button onClick={toggleMenu} className="text-white">
                                 <X size={24} className={menuIconColor} />
                             </button>
                         </div>
                         <div className="flex flex-col gap-6 text-lg">
-                            <Link to="/" className={`hover:text-blue-200 text-white`}>Home</Link>
-                            <Link to="/about" className={`hover:text-blue-200 text-white`}>About</Link>
-                            <Link to="/faq" className={`hover:text-blue-200 text-white`}>FAQ</Link>
-                            <Link to="/editor" className={`hover:text-blue-200 text-white`}>Web Editor</Link>
-                            <Link to="https://jeremyzxi.github.io/" className={`hover:text-blue-200 text-white`}>Support</Link>
-                            <Link to="https://keycas-doc.github.io/" className={`hover:text-blue-200 text-white`}>Docs</Link>
-                            <Link to="/casguide" className={`hover:text-blue-200 text-white`}>CAS Guide</Link>
+                            {navLinks.map(link => renderNavLink(link, true))}
                         </div>
                     </div>
                 </div>
