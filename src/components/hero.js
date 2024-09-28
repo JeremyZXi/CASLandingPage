@@ -1,13 +1,12 @@
 import React, { useEffect, useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination, Navigation, EffectCube } from 'swiper/modules';
+import { Autoplay, Pagination, Navigation, EffectFade } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import 'swiper/css/effect-cube';
+import 'swiper/css/effect-fade';
 import ProjectCard from "./ProjectCard";
 import { projects } from "../data/projects";
-import { Button } from "./ui/button";
 import { motion, useAnimation } from 'framer-motion';
 
 const Hero = () => {
@@ -58,7 +57,7 @@ const Hero = () => {
     };
 
     return (
-        <div className="hero-container relative min-h-screen py-24 px-8 overflow-hidden bg-gradient-to-b from-[rgb(45,54,74)] via-[rgb(85,94,114)] to-[rgb(255,255,255)]">
+        <div className="hero-container relative min-h-screen overflow-hidden bg-[rgb(45,54,74)]">
             <motion.div
                 ref={ref}
                 initial="hidden"
@@ -66,38 +65,34 @@ const Hero = () => {
                 variants={containerVariants}
                 className="flex flex-col lg:flex-row items-center justify-between p-8 min-h-screen"
             >
-                <motion.div variants={itemVariants} className="lg:w-1/2 mb-12 lg:mb-0">
-                    <h1 className="text-5xl font-bold mb-6 text-white leading-tight">Welcome to <span className="text-[rgb(170,37,62)]">KeyCAS</span></h1>
-                    <p className="text-xl mb-8 text-gray-200">Empowering Your Digital Journey</p>
+                <motion.div variants={itemVariants} className="lg:w-1/2 mb-12 lg:mb-0 z-10">
+                    <h1 className="text-6xl font-bold mb-6 text-white leading-tight">
+                        Welcome to <span className="text-[rgb(170,37,62)]">KeyCAS</span>
+                    </h1>
+                    <p className="text-2xl mb-8 text-gray-200">Empowering Your Digital Journey</p>
                     <div className="flex space-x-4">
-                        <a href="https://edit.keycas.cn">
-                            <Button
+                        <a href="https://edit.keycas.cn" className="inline-block">
+                            <motion.button
                                 className="bg-[rgb(170,37,62)] hover:bg-[rgb(200,57,82)] text-white px-8 py-3 rounded-full text-lg font-bold transition-all duration-300 hover:shadow-lg"
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                             >
                                 Get Involved
-                            </Button>
+                            </motion.button>
                         </a>
-                        <Button
+                        <motion.button
                             className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full text-lg font-bold transition-all duration-300 hover:bg-white hover:text-[rgb(45,54,74)]"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                         >
                             Learn More
-                        </Button>
+                        </motion.button>
                     </div>
                 </motion.div>
-                <motion.div variants={itemVariants} className="lg:w-1/2">
+                <motion.div variants={itemVariants} className="lg:w-1/2 relative z-10">
                     <Swiper
-                        modules={[Autoplay, Pagination, Navigation, EffectCube]}
-                        effect="cube"
-                        cubeEffect={{
-                            shadow: true,
-                            slideShadows: true,
-                            shadowOffset: 20,
-                            shadowScale: 0.94,
-                        }}
+                        modules={[Autoplay, Pagination, Navigation, EffectFade]}
+                        effect="fade"
                         spaceBetween={30}
                         slidesPerView={1}
                         autoplay={{
@@ -106,10 +101,11 @@ const Hero = () => {
                         }}
                         pagination={{ clickable: true }}
                         navigation
+                        className="w-full h-[500px] rounded-lg overflow-hidden shadow-2xl"
                     >
                         {projects.map((project) => (
                             <SwiperSlide key={project.id}>
-                                <div className="h-[400px] lg:h-[500px]">
+                                <div className="h-full">
                                     <ProjectCard project={{...project, size: 'small'}} />
                                 </div>
                             </SwiperSlide>
@@ -117,7 +113,8 @@ const Hero = () => {
                     </Swiper>
                 </motion.div>
             </motion.div>
-            <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent"></div>
+            <div className="absolute top-0 left-0 w-full h-full bg-[url(https://www.keystoneacademy.cn/Public/Uploads/uploadfile/images/20240927/864A2527.png)] bg-cover bg-center opacity-10 z-0"></div>
+            <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[rgb(45,54,74)] to-transparent z-20"></div>
         </div>
     );
 }

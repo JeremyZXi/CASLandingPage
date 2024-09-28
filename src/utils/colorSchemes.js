@@ -35,4 +35,10 @@ export const colorSchemes = {
         description: 'text-orange-200',
         button: 'bg-orange-500 hover:bg-orange-600',
     },
+    NEST: {
+        background: 'bg-[#6B46C1]',
+        text: 'text-white',
+        description: 'text-purple-200',
+        button: 'bg-white text-[#6B46C1] hover:bg-[#F3E8FF] hover:text-[#553C9A]',
+    }
 };

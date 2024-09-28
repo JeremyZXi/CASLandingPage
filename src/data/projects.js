@@ -3,14 +3,15 @@ import {Code, GraduationCap, Microscope, Palette, Waypoints} from "lucide-react"
 export const projects = [
     {
         id: 1,
-        title: "AI Chatbot",
-        student: "Alice Smith",
-        category: "Computer Science",
+        title: "NEST",
+        student: "Yolanda Wang, Eva Jiang, Yolanda Huang, Christine Chen",
+        category: "Connections",
         icon: Waypoints,
         size: "large",
-        description: "An advanced AI chatbot that uses natural language processing to provide human-like conversations and assist with various tasks.",
-        image: "/assests/WechatIMG56.jpg",
-        color: "orange"
+        description: "Network for Enriching Service Transformation-NEST connects all student service leaders and foster easy collaboration and resource exchange.",
+        image: "/assests/projectCover/NEST_white.png",
+        color: "NEST",
+        url:"https://nest-home.netlify.app/about"
 
     },
     {
