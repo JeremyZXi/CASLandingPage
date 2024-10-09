@@ -4,7 +4,7 @@ export const projects = [
     {
         id: 1,
         title: "NEST",
-        student: "Yolanda Wang, Eva Jiang, Yolanda Huang, Christine Chen",
+        student: "Yolanda Wang, Eva Jiang, Yolanda Huang, Christine Chen, Allan Wang",
         category: "Connections",
         icon: Waypoints,
         size: "large",
@@ -17,7 +17,7 @@ export const projects = [
     {
         id: 2,
         title: "Open Source Web builder",
-        student: "BobC",
+        student: "Bobc",
         category: "Computer Science",
         icon: Code,
         size: "small",
