@@ -63,17 +63,17 @@ const Hero = () => {
                 initial="hidden"
                 animate={controls}
                 variants={containerVariants}
-                className="flex flex-col lg:flex-row items-center justify-between p-8 min-h-screen"
+                className="flex flex-col lg:flex-row items-center justify-between p-4 md:p-8 min-h-screen"
             >
-                <motion.div variants={itemVariants} className="lg:w-1/2 mb-12 lg:mb-0 z-10">
-                    <h1 className="text-6xl font-bold mb-6 text-white leading-tight">
-                        Welcome to <span className="text-[rgb(170,37,62)]">KeyCAS</span>
+                <motion.div variants={itemVariants} className="lg:w-1/2 mb-8 lg:mb-0 z-10 lg:pr-8">
+                    <h1 className="text-4xl md:text-6xl font-bold mb-4 md:mb-6 text-white leading-tight">
+                        Welcome to <span className="text-[rgb(170,37,62)] text-center">KeyCAS</span>
                     </h1>
-                    <p className="text-2xl mb-8 text-gray-200">Empowering Your Digital Journey</p>
-                    <div className="flex space-x-4">
+                    <p className="text-xl md:text-2xl mb-6 md:mb-8 text-gray-200 text-center">Empowering Your Digital Journey</p>
+                    <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
                         <a href="https://edit.keycas.cn" className="inline-block">
                             <motion.button
-                                className="bg-[rgb(170,37,62)] hover:bg-[rgb(200,57,82)] text-white px-8 py-3 rounded-full text-lg font-bold transition-all duration-300 hover:shadow-lg"
+                                className="w-full sm:w-auto bg-[rgb(170,37,62)] hover:bg-[rgb(200,57,82)] text-white px-6 md:px-8 py-3 rounded-full text-lg font-bold transition-all duration-300 hover:shadow-lg"
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                             >
@@ -81,7 +81,7 @@ const Hero = () => {
                             </motion.button>
                         </a>
                         <motion.button
-                            className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full text-lg font-bold transition-all duration-300 hover:bg-white hover:text-[rgb(45,54,74)]"
+                            className="w-full sm:w-auto bg-transparent border-2 border-white text-white px-6 md:px-8 py-3 rounded-full text-lg font-bold transition-all duration-300 hover:bg-white hover:text-[rgb(45,54,74)]"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                         >
@@ -89,6 +89,7 @@ const Hero = () => {
                         </motion.button>
                     </div>
                 </motion.div>
+
                 <motion.div variants={itemVariants} className="lg:w-1/2 relative z-10">
                     <Swiper
                         modules={[Autoplay, Pagination, Navigation, EffectFade]}
@@ -101,7 +102,7 @@ const Hero = () => {
                         }}
                         pagination={{ clickable: true }}
                         navigation
-                        className="w-full h-[500px] rounded-lg overflow-hidden shadow-2xl"
+                        className="w-full max-w-[500px] h-[300px] md:h-[500px] rounded-lg overflow-hidden shadow-2xl"
                     >
                         {projects.map((project) => (
                             <SwiperSlide key={project.id}>
