@@ -11,7 +11,7 @@ export const projects = [
         description: "Network for Enriching Service Transformation-NEST connects all student service leaders and foster easy collaboration and resource exchange.",
         image: "/assests/projectCover/NEST_white.png",
         color: "NEST",
-        url:"https://nest-home.netlify.app/about"
+        url:"https://nest-home.netlify.app/"
 
     },
     {
