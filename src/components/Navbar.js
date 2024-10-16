@@ -28,12 +28,12 @@ const Navbar = () => {
         if (currentScrollY > bannerHeight) {
             const alpha = Math.min((currentScrollY - bannerHeight) / 100, 1);
             setNavbarBackground(`rgba(255, 255, 255, ${alpha})`);
-            setLogoSrc('assests/KeyCAS_logo_b.svg');
+            setLogoSrc('/Blue Round Keystone.png');
             setTextColor('text-gray-600');
             setMenuIconColor('text-gray-600');
         } else {
             setNavbarBackground('transparent');
-            setLogoSrc('assests/KeyArchlogo.svg');
+            setLogoSrc('/Inverted colors.png');
             setTextColor('text-white');
             setMenuIconColor('text-white');
         }

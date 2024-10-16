@@ -89,7 +89,7 @@ const Editor = () => {
                     <div className="flex justify-center">
                         <a href="https://edit.keycas.cn/en/connectors/" className="group">
                             <Button className="bg-gradient-to-r from-[rgb(170,37,62)] to-[rgb(200,57,82)] text-white hover:from-white hover:to-white hover:text-[rgb(170,37,62)] px-8 py-4 rounded-full text-xl font-bold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 h-16 w-80 flex items-center justify-center">
-                                <img src="assests/KeyCAS_keystoneblue_round.svg" alt="Logo" className="h-10 mr-3 transition-transform duration-300 group-hover:rotate-12" />
+                                <img src="/assests/Keystone Blue Round Black的副本.png" alt="Logo" className="h-10 mr-3 transition-transform duration-300 group-hover:rotate-12" />
                                 <span className="group-hover:scale-110 inline-block transition-transform duration-300">Start Creating</span>
                             </Button>
                         </a>

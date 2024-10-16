@@ -5,6 +5,12 @@ export const colorSchemes = {
         description: 'text-blue-200',
         button: 'bg-[rgb(170,37,62)] text-[rgb(255,255,255)] hover:bg-white hover:text-[rgb(170,37,62)]',
     },
+    black: {
+        background: 'bg-[#14181A]',
+        text: 'text-white',
+        description: 'text-black-0',
+        button: 'bg-[#787877] text-[rgb(255,255,255)] hover:bg-white hover:text-[rgb(25,34,54)]',
+    },
     red: {
         background: 'bg-[rgb(170,37,62)]',
         text: 'text-white',
