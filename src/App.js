@@ -13,6 +13,8 @@ import About from "./pages/About";
 import CASguide from "./pages/CASguide";
 import Editor from "./pages/Editor";
 import FAQ from "./pages/FAQ";
+import NotFound from './components/NotFound';
+
 //Component
 import Navbar from "./components/Navbar";
 import Banner from './components/Banner';
@@ -46,6 +48,7 @@ const App = () => {
                 <Route path="/casguide" element={<CASguide />} />
                 <Route path="/faq" element={<FAQ />} />
                 <Route path="/editor" element={<Editor />} />
+                <Route path="*" element={<NotFound />} />
             </Routes>
             </div>
         </Router>

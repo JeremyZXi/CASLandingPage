@@ -1,0 +1,1 @@
+Keystone Blue Round Black.png
